@@ -26,7 +26,7 @@ print(api.set_limit(product_name='telegram', price='123'))
 print(api.delete_limit(product_name='telegram'))
 
 # Вывести список товаров
-print(api.set_limit(country='indonesia', operator='any'))
+print(api.product_request(country='indonesia', operator='any'))
 
 # Вывести список цен
 print(api.request_for_prices())
