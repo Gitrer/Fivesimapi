@@ -19,20 +19,46 @@ class fivesim:
             raise Exception(response.status_code)
 
    def order_history(self, category, limit=None, offset=None, order=None, reverse=None):
-       url = f'{self.base_url}user/orders?category={category}'
-       response = requests.get(url, headers=self.headers)
-       if response.status_code == 200:
-           return response.text
-       else:
-           raise Exception(response.status_code)
+       url = f'{self.base_url}user/orders'
+       url_params = f'?category={category}'
+
+       if limit is not None:
+           url_params += f'&limit={limit}'
+       if offset is not None:
+           url_params += f'&offset={offset}'
+       if order is not None:
+           url_params += f'&order={order}'
+       if reverse is not None:
+           url_params += f'&reverse={reverse}'
+
+       full_url = url + url_params
+       return full_url
+       # response = requests.get(full_url, headers=self.headers)
+       # if response.status_code == 200:
+       #     return response.text
+       # else:
+       #     raise Exception(response.status_code)
 
    def payment_history(self, limit=None, offset=None, order=None, reverse=None):
        url = f'{self.base_url}user/payments'
-       response = requests.get(url, headers=self.headers)
-       if response.status_code == 200:
-           return response.text
-       else:
-           raise Exception(response.status_code)
+       url_params = ''
+
+       if limit is not None:
+           url_params += f'?limit={limit}'
+       if offset is not None:
+           url_params += f'&offset={offset}'
+       if order is not None:
+           url_params += f'&order={order}'
+       if reverse is not None:
+           url_params += f'&reverse={reverse}'
+
+       full_url = url + url_params
+       return full_url
+       # response = requests.get(full_url, headers=self.headers)
+       # if response.status_code == 200:
+       #     return response.text
+       # else:
+       #     raise Exception(response.status_code)
 
    def max_prices(self):
        url = f'{self.base_url}user/max-prices'
