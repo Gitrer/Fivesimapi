@@ -16,6 +16,9 @@ print(api.get_profile())
 # Выводит историю заказов
 print(api.order_history(category='telegram'))
 
+# Выводит историю платежей
+print(api.payment_history())
+
 # Выводит список установленых максимальных цен
 print(api.max_prices())
 
