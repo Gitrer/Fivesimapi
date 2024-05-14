@@ -32,12 +32,11 @@ class fivesim:
            url_params += f'&reverse={reverse}'
 
        full_url = url + url_params
-       return full_url
-       # response = requests.get(full_url, headers=self.headers)
-       # if response.status_code == 200:
-       #     return response.text
-       # else:
-       #     raise Exception(response.status_code)
+       response = requests.get(full_url, headers=self.headers)
+       if response.status_code == 200:
+          return response.text
+       else:
+          raise Exception(response.status_code)
 
    def payment_history(self, limit=None, offset=None, order=None, reverse=None):
        url = f'{self.base_url}user/payments'
@@ -53,12 +52,11 @@ class fivesim:
            url_params += f'&reverse={reverse}'
 
        full_url = url + url_params
-       return full_url
-       # response = requests.get(full_url, headers=self.headers)
-       # if response.status_code == 200:
-       #     return response.text
-       # else:
-       #     raise Exception(response.status_code)
+       response = requests.get(full_url, headers=self.headers)
+       if response.status_code == 200:
+          return response.text
+       else:
+          raise Exception(response.status_code)
 
    def max_prices(self):
        url = f'{self.base_url}user/max-prices'
