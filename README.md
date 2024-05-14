@@ -1,12 +1,6 @@
 # fivesimapi
 Упрощенное взаимодействие с API веб-сайта 5sim
 
-# Установка
-
-```shell
-pip install 5simapi
-```
-
 # Использование
 Апи ключ находится тут - https://5sim.biz/settings/security <br>
 Ответы во всех методах приходят в json формате
