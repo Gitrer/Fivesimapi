@@ -60,5 +60,6 @@ print(api.complete_order(id='123456'))
 ```
 
 # Разработчик
-Разработчик -Gitrer
+Разработчик - Gitrer
+
 Telegram - @devilgrammm
