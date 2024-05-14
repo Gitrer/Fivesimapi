@@ -10,7 +10,7 @@ def readme():
 setup(
   name='5simapi',
   version='1.0.0',
-  author='Tendrly',
+  author='Gitrer',
   author_email='vadimbagaev462@gmail.com',
   description='This library is designed for simplified interaction with the API of the 5sim website',
   long_description=readme(),
